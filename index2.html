@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بقالتك</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/Poppins-Black.ttf">
+    <script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <style>
+        .settings-box.active{
+            display: flex;
+        }
+        .box-container .box{
+            padding: 10px;
+            padding-bottom: 25px;
+        }
+        .theEnd{
+            bottom:0;
+            left:0;
+            right:0;
+            width:100%;
+            padding-bottom:15px;
+            padding-top:15px;
+            margin: 0;
+            text-align:center;
+            background: var(--lightBackGround);
+            box-shadow: 5px 5px 10px silver;
+            color: var(--black);
+        }
+        .theEnd a{
+            color: var(--orange);
+            transform: 0.3s;
+            margin-right:10px;
+        }
+        .theEnd a:hover{
+            color:var(--black);
+        }
+                        /* gallery */
+                        .gallary .container{
+            display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+            perspective: 1000px;
+        }
+        .gallary .card{
+            height: 280px; width: 260px; border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            transform-style: preserve-3d;
+            margin: 10px 25px;
+        }
+        .gallary .card .image{
+            background-size:cover !important;
+            background-position: center !important;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            border-radius: 5px;
+        }
+        .gallary .card:hover .image{
+            transform: scale(1.2);
+        }
+        .gallary .card .caption{
+            height: 95%;
+            width: 95%;
+            border: 2px solid #fff;
+            color: #fff;
+            position: absolute;
+            top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0);
+            text-align: center;
+            padding-top: 100px;
+            cursor: pointer;
+            letter-spacing: 3px;
+        }
+        .gallary .card:hover .caption{
+            top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1);
+        }
+        .gallary .card .caption h3{
+            width: 70%;
+            background: purple;
+            margin: 0.1rem auto;
+            padding: 0.5rem 0;
+            transform: translateX(-20rem);
+            transition-delay: 0.1s;
+            cursor:auto;
+        }
+        .gallary .card:hover .caption h3{
+            transform: translateX(0rem);
+        }
+    </style>
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+        <a href="index2.html" class="logo"><i class="fas fa-shopping-basket"></i>بقالتك</a>
+        <nav class="navbar">
+            <a href="#home">الرئيسيه</a>
+            <a href="#features">المميزات</a>
+            <a href="#categories">الاقسام</a>
+            <a href="#gallary">المعرض</a>
+            <a href="shop2.php">الشراء</a>
+            <a href="#review">التوصيات</a>
+            <a href="#blogs">المدونات</a>
+        </nav>
+        <div class="icons">
+            <div class="menu-btn" id="menu-btn" data-title="القائمه"><a href="#"><i class="fas fa-bars"></i></a></div>
+            <div class="login-btn" data-title="التسجيل"><a href="login2.php"><i class="fas fa-user"></i></a></div>
+            <div class="admin-btn" data-title="المشرف"><a href="adminLogin2.php"><i class="fas fa-user-gear"></i></a></div>
+            <div class="lang-btn" id="settings-btn" data-title="الانجليزيه"><a href="index.html"><i class="fas fa-language"></i></a></div>
+        </div>
+    </header>
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>منتجات  <span>طازجه وعضويه  </span> لك </h3>
+            <p>نقدمها لك من ارقي مزارعنا, طازجه وجاهزه.</p>
+            <a href="shop2.php" class="btn">تسوق الأن</a>
+        </div>
+    </section>
+    <!-- features section-->
+    <section class="features" id="features">
+        <h1 class="mHeading"> <span>المميزات</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/feature-img-1.png" alt="">
+                <h3>طازجه وعضويه</h3>
+                <p>نقدمها لك من ارقي مزارعنا, طازجه وجاهزه.</p>
+                <a href="#" class="btn">اقرأ أكثر</a>
+            </div>
+            <div class="box">
+                <img src="img/feature-img-2.png" alt="">
+                <h3>توصيل مجاني</h3>
+                <p>نقدم لمستخدمينا توصيل مجاني لأي مكان في مصر</p>
+                <a href="#" class="btn">اقرأ أكثر</a>
+            </div>
+            <div class="box">
+                <img src="img/feature-img-3.png" alt="">
+                <h3>سهوله الدفع</h3>
+                <p>نقدم لك اسهل طرق الدفع لضمان راحتك</p>
+                <a href="#" class="btn">اقرأ أكثر</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- categories section -->
+    <section class="categories" id="categories">
+        <h1 class="mHeading"> <span>الاقسام</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/cat-1.png" alt="">
+                <h3>خضراوات</h3>
+                <p>خصم 45% </p>
+                <a href="shop2.php" class="btn cat-btn">تسوق الأن</a>
+            </div>
+            <div class="box">
+                <img src="img/cat-2.png" alt="">
+                <h3>فواكهه</h3>
+                <p>خصم 20% </p>
+                <a href="shop2.php" class="btn cat-btn">تسوق الأن</a>
+            </div>
+            <div class="box">
+                <img src="img/cat-3.png" alt="">
+                <h3>منتجات اللألبان</h3>
+                <p>خصم 50% </p>
+                <a href="shop2.php" class="btn cat-btn">تسوق الأن</a>
+            </div>
+            <div class="box">
+                <img src="img/cat-4.png" alt="">
+                <h3>اللحوم</h3>
+                <p>خصم 10% </p>
+                <a href="shop2.php" class="btn cat-btn">تسوق الأن</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Gallary section -->
+        <section class="gallary" id="gallary">
+            <h1 class="mHeading"><span>Gallary</span></h1>
+            <div class="container">
+                <div class="card">
+                    <div class="image" style="background-image: url(img/gallery/gallery1.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image" style="background: url(img/gallery/gallery2.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image" style="background: url(img/gallery/gallery3.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image" style="background: url(img/gallery/gallery4.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image" style="background: url(img/gallery/gallery6.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image" style="background: url(img/gallery/gallery7.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image" style="background: url(img/gallery/gallery10.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image" style="background: url(img/gallery/gallery14.jpg);"></div>
+                    <div class="caption">
+                        <h3>Amazing Store</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- review section -->
+    <section class="" id="review">
+        <div class="section">
+            <h1 class="mHeading"><span>توصيات</span> المستخدمين</h1>
+            <div class="container-fluid" dir="ltr">
+                <div class="review owl-carousel owl-theme ">
+                    <div class="card item">
+                        <img src="img/pic-1.png" alt="">
+                        <h1>محمد ايمن</h1>
+                        <p>موقع ممتاز والواجهه رائعه</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="img/pic-2.png" alt="">
+                        <h1>رنا سمير</h1>
+                        <p>التوصيل سريع والمعالمه راقيه</p>
+                        <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="img/pic-3.png" alt="">
+                        <h1>شادي علي</h1>
+                        <p>المنتجات طازجه وذات جوده عاليه</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="img/pic-4.png" alt="">
+                        <h1>ريم الشاذلي</h1>
+                        <p>الاستخدام رائع, ولكن المنتجات غير طازجه</p>
+                        <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="img/pic-5.png" alt="">
+                        <h1>هند المصري</h1>
+                        <p>الاستخدام رائع, المنتجات طازجه</p>
+                        <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="img/pic-6.jpg" alt="">
+                        <h1>تقي احمد</h1>
+                        <p>التوصيل سريع والمعالمه راقيه</p>
+                        <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="img/pic-7.jpg" alt="">
+                        <h1>اسماء مصطفي</h1>
+                        <p>المنتجات طازجه وذات جوده عاليه</p>
+                        <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <img src="img/pic-8.jpg" alt="">
+                        <h1>محمد ابراهيم</h1>
+                        <p>الاستخدام رائع, ولكن المنتجات غير طازجه</p>
+                        <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blogs section -->
+    <section class="blogs" id="blogs">
+        <h1 class="mHeading"> <span>المدونات</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/blog-1.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>بواسطه جوده</a>
+                        <a href="#"><i class="fas fa-calendar"></i>الاول من فبراير, 2022</a>
+                    </div>
+                    <h3>خضراوات وفواكهه طازجه وعضويه</h3>
+                    <p>نقدم لكم افضل الخدمات لتناسب زوقكم</p>
+                    <a href="#" class="btn">اقرأ أكثر</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/blog-2.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>بواسطه جوده</a>
+                        <a href="#"><i class="fas fa-calendar"></i>الاول من فبراير, 2022</a>
+                    </div>
+                    <h3>خضراوات وفواكهه طازجه وعضويه</h3>
+                    <p>نقدم لكم افضل الخدمات لتناسب زوقكم</p>
+                    <a href="#" class="btn">اقرأ أكثر</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="img/blog-3.jpg" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>بواسطه جوده</a>
+                        <a href="#"><i class="fas fa-calendar"></i>الاول من فبراير, 2022</a>
+                    </div>
+                    <h3>خضراوات وفواكهه طازجه وعضويه</h3>
+                    <p>نقدم لكم افضل الخدمات لتناسب زوقكم</p>
+                    <a href="#" class="btn">اقرأ أكثر</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="boxi">
+                <h3>بقالتك <i class="fas fa-shopping-basket"></i></h3>
+                <p>بقالتك محل شراء كل ما يخص البقاله من خضراوات وفواكهه وغيرها</p>
+                <div class="share">
+                    <a href="https://www.facebook.com/abdo.goda.7169" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-youtube"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+            <div class="boxi">
+                <h3>معلومات التواصل</h3>
+                <a href="tel:01142366716" class="links"><i class="fas fa-phone"></i>01142366716</a>
+                <a href="tel:01019135059" class="links"><i class="fas fa-phone"></i>01019135059</a>
+                <a href="mailto:abdogoda0a@gmail.com" class="links"><i class="fas fa-envelope"></i> abdogodaOa@gmail.com</a>
+                <a href="https://www.google.com/maps/place/%D8%AE%D8%A7%D9%84%D8%AF+%D8%A5%D8%A8%D9%86+%D8%A7%D9%84%D9%88%D9%84%D9%8A%D8%AF%D8%8C+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85+%D8%A7%D9%84%D8%B4%D8%B1%D9%82%D9%8A%D8%A9%D8%8C+%D9%82%D8%B3%D9%85+%D8%A3%D9%88%D9%84+%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC%E2%80%AD/@30.1632847,31.4105278,17z/data=!3m1!4b1!4m5!3m4!1s0x145810d08a37fc43:0xb6b6130fb234cf44!8m2!3d30.1632801!4d31.4083391" class="links"><i class="fas fa-map-marked-alt"></i> cairo, egypt - 2165465</a>
+            </div>
+            <div class="boxi">
+                <h3>روابط سريعه</h3>
+                <a href="#home" class="links"><i class="fas fa-arrow-right"></i>الرئيسيه</a>
+                <a href="#features" class="links"><i class="fas fa-arrow-right"></i> المميزات</a>
+                <a href="#categories" class="links"><i class="fas fa-arrow-right"></i> الاقسام</a>
+                <a href="shop2.php" class="links"><i class="fas fa-arrow-right"></i> الشراء</a>
+                <a href="#gallary" class="links"><i class="fas fa-arrow-right"></i> المعرض</a>
+                <a href="#review" class="links"><i class="fas fa-arrow-right"></i> التوصيات</a>
+                <a href="#blogs" class="links"><i class="fas fa-arrow-right"></i> المدونات</a>
+            </div>
+            <div class="boxi">
+                <h3>النشره الاخباريه</h3>
+                <p>اشترك ليصلك كل جديد</p>
+                <input type="email" class="email" placeholder="بريدك الالكتروني">
+                <img src="img/payment.png" class="payment-image" alt=""><br>
+                <input type="submit" class="btn" value="اشتراك">
+            </div>
+        </div>
+    </section>
+    <h3 class="theEnd"> Created BY <a href="mailto:abdogoda0a@gmail.com">Abdulrhman Goda</a> , All Rights Reseved © </h3>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        
+        // effect gallery
+        $(document).ready(function(){
+            $('.gallary .container .card').mousemove(function(e){
+                let mediaQuery = window.matchMedia('(max-width:767px)');
+                var x = e.offsetX / 15;
+                var y = e.offsetY / 15;
+                if(mediaQuery.matches){
+                    var x = e.offsetX / 0;
+                    var y = e.offsetY / 0;
+                }
+                $(this).css('transform','rotateX(' + x + 'deg) rotateY(' + y + 'deg)');
+                $(this).children('.image').css({'top':y, 'left':x});
+            })
+            $('.gallary .container .card').mouseleave(function(){
+                $(this).css('transform','rotateX(0deg) rotateY(0deg)');
+                $(this).children('.image').css({'top':'0', 'left':'0'});
+            })
+        })
+        
+        
+        // slider reviews
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:20,
+            nav:true,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+            </script>
+</body>
+</html>

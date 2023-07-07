@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adminStyle.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>ADMIN-Dashboard</title>
+    <link rel="icon" href="img/icon.png">
+    <style>
+        input{
+            text-transform: lowercase !important;
+        }
+        select{
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid silver;
+            box-shadow: 1px 1px 5px silver;
+            width: 80%;
+            margin: 5px auto !important;
+            padding: 5px;
+            font-size: 17px;
+            color: #666;
+        }
+        .main{
+            padding: 5px;
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- header section -->
+    <header class="header">
+        <a href="index.html" class="logo"><i class="fas fa-shopping-basket"></i>Grocery</a>
+        <a href="index.html" class="homebtn" style="font-size: 25px; display: flex; align-items: center;">Home Page <i class="fa fa-arrow-right-rotate"></i></a>
+        <div class="icons">
+            <div class="admin-btn" data-title="Admin"><a href="adminLogin.php"><i class="fas fa-user-gear"></i></a></div>
+            <div class="users-btn" data-title="Users"><a href="users.php"><i class="fas fa-users"></i></a></div>
+            <div class="products-btn" data-title="Products"><a href="products.php"><i class="fas fa-server"></i></a></div>
+            <div class="sales-btn" data-title="Sales"><a href="sales.php"><i class="fas fa-list-check"></i></a></div>
+            <div class="lang-btn" data-title="Arabic"><a href="admin2.html"><i class="fas fa-language"></i></a></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <center>
+            <div class="main">
+                <h1><u>Admin Control</u></h1>
+                <form action="insert.php" method="post" enctype="multipart/form-data">
+                    <img src="img/Admin-amico.png" alt="logo" width="230px"><br>
+                    <input type="text" name="name" placeholder="Product Name"><br>
+                    <select name="category">
+                        <option value="">Product Type</option>
+                        <option value="meat">meat</option>
+                        <option value="dairy">dairy</option>
+                        <option value="fruits">fruits</option>
+                        <option value="vegetables">vegetables</option>
+                    </select><br>
+                    <input type="text" name="price" placeholder="Product Price"><br>
+                    <input type="number" name="count" min="1" placeholder="Product Quantity"><br>
+                    <input type="file" name="image" id="file" style="display: none;">
+                    <label for="file" class="btn btn-success">Select Image</label>
+                    <button name="upload" class="btn btn-danger">Upload Product</button><br>
+                    <a href="products.php" class="btn btn-info text-white viewalll">View All Products <i class="fa fa-arrow-right px-1"></i></a>
+                </form>
+            </div>
+        </center>
+    </div>
+</body>
+</html>

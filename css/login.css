@@ -1,0 +1,186 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mHeading{
+    padding: 2rem 0 !important;
+    margin: 0 auto;
+    margin-top: 30px !important;
+}
+/*  */
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: var(--lightBackGround);
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*  */
+
+/* amazing login form */
+.amaz-login{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    position: relative;
+    margin: 0 auto;
+    padding: 0rem 10rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    margin-bottom: 0px;
+}
+.amaz-login .card{
+    width: 30%;
+    height: 500px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.25);
+    perspective: 1000px;
+    border-radius: 15px;
+}
+.amaz-login .card .inner-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+.amaz-login .card .inner-box .card-front,
+.amaz-login .card .inner-box .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(#ff7700d7,#130f40c5),url(../img/loginForm.png);
+    padding:30px 55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+.amaz-login .card .inner-box .card-back{
+    transform: rotateY(180deg);
+}
+.amaz-login .card .inner-box h2{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.amaz-login .card .inner-box .input-box,
+.amaz-login .card .inner-box button{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    margin: 6px 0;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    caret-color: #fff;
+    font-weight: normal;
+    font-size: 17px;
+    color: #fff;
+    text-transform: lowercase !important;
+}
+.amaz-login .card .inner-box button{
+    width: 90%;
+    margin: 20px auto;
+}
+.amaz-login .card .inner-box .input-box::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    font-weight: normal;
+    transition:all 0.5s ease-in-out;
+}
+.amaz-login .card .inner-box .input-box:focus::placeholder{
+    opacity: 0;
+}
+.amaz-login .card .inner-box button:hover{
+    background: #0a123d;
+}
+.amaz-login .card .inner-box label{
+    font-size: 13px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.amaz-login .card .inner-box a:hover{
+    color: #0a123d;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:1220px){
+    html{
+        font-size: 58% !important;
+    }
+}
+@media (max-width:991px){
+    html{
+        font-size: 52% !important;
+    }
+    .header a.homebtn{
+        display: none !important;
+    }
+    .amaz-login .card{
+        width: 65%;
+    }
+    .amaz-login .card .inner-box .card-front,
+    .amaz-login .card .inner-box .card-back{
+        padding:30px 35px;
+    }
+}
+@media (max-width:775px){
+    html{
+        font-size: 50% !important;
+    }
+}
+@media (max-width:575px){
+    html{
+        font-size: 45% !important;
+    }
+    .amaz-login .card{
+        width: 75%;
+    }
+    .amaz-login .card .inner-box .card-front,
+    .amaz-login .card .inner-box .card-back{
+        padding:30px 20px;
+    }
+}
+@media (max-width:300px){
+    html{
+        font-size: 40% !important;
+    }
+    .amaz-login .card{
+        width: 95%;
+    }
+    .amaz-login .card .inner-box .card-front,
+    .amaz-login .card .inner-box .card-back{
+        padding:30px 7px;
+    }
+}
+@media (max-width:200px){
+    html{
+        font-size: 40% !important;
+    }
+    .amaz-login .card{
+        width: 95%;
+    }
+    .amaz-login .card .inner-box .card-front,
+    .amaz-login .card .inner-box .card-back{
+        padding:20px 3px;
+    }
+}

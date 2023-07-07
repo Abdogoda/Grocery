@@ -1,0 +1,34 @@
+*{
+    font-weight: bolder !important;
+}
+html{
+    font-size: 85%;
+}
+/*  */
+.header .logo svg,
+.header .logo i{
+    margin-right: 0;
+    margin-left: 1rem;
+}
+@media (max-width:775px){
+    .header .navbar{
+        left: 2rem !important;
+        right: auto !important;
+    }
+}
+.blogs .box-container .box .icons a svg{
+    margin-right: 0;
+    padding-left: 0.5rem;
+}
+.footer .box-container{
+    text-align: right !important;
+}
+.footer .boxi h3{
+    text-align: right !important;
+}
+.footer .boxi svg{
+    text-align: right !important;
+}
+.footer .boxi a{
+    text-align: right !important;
+}
